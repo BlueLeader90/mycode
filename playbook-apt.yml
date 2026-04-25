@@ -1,0 +1,13 @@
+---
+- name: Simple playbook   # describes the playbook
+  hosts: bender
+
+  tasks:
+    - name: "apt module - Install a simple application"
+      apt: #module
+        name: figlet # module parameters
+        state: absent # module parameters
+      become: true # keyword -- tells ansible how to run this task
+      #run as root!
+      #
+
